@@ -26,7 +26,7 @@ export const setupEventListeners = (controls) => {
   controls.addEventListener('unlock', showMenu); // add the event listener to the controls to show the menu when the pointer is unlocked
 
   // Add event listeners for the audio guide buttons
-  document.getElementById('start_audio').addEventListener('click', startAudio); 
+
 
   document.addEventListener('keydown', event => {
     if (event.code === 'Space') {
@@ -34,7 +34,7 @@ export const setupEventListeners = (controls) => {
     }
   })
 
-  document.getElementById('stop_audio').addEventListener('click', stopAudio);
+
 };
 
 function onKeyDown(event) {
