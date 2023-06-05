@@ -8,7 +8,7 @@ export function createWalls(scene, textureLoader) {
   const wallTexture = textureLoader.load('img/white-texture.jpg');
   wallTexture.wrapS = THREE.RepeatWrapping;
   wallTexture.wrapT = THREE.RepeatWrapping;
-  wallTexture.repeat.set(1, 1); // `repeat` property of a texture is a Vector2 that defines how many times the texture should be repeated in the x and y directions. sets the texture to be repeated once in both the x and y directions. This means that the texture will not be repeated and will only be displayed once on the material
+  wallTexture.repeat.set(2, 2); // `repeat` property of a texture is a Vector2 that defines how many times the texture should be repeated in the x and y directions. sets the texture to be repeated once in both the x and y directions. This means that the texture will not be repeated and will only be displayed once on the material
 
   const wallMaterial = new THREE.MeshLambertMaterial({ map: wallTexture }); //
 
