@@ -2,7 +2,23 @@ import { keysPressed } from './movement.js'; // import the keysPressed object
 import { showMenu } from './menu.js'; // import the showMenu function
 import { startAudio, stopAudio } from './audioGuide.js';
 
+let audioPlay = false;
 // add the controls parameter which is the pointer lock controls and is passed from main.js where setupEventListeners is called
+
+async function playMusic() {
+  if(!audioPlay){
+    console.log('startMusic')
+     startAudio()
+     await new Promise((resolve, reject) => setTimeout(resolve, 1000));
+     console.log("change state")
+    audioPlay = true
+  }
+  else if (audioPlay){
+    stopAudio()
+    await new Promise((resolve, reject) => setTimeout(resolve, 1000));
+    audioPlay = false
+  }
+}
 export const setupEventListeners = (controls) => {
   // add the event listeners to the document which is the whole page
   document.addEventListener('keydown', onKeyDown, false); // keydown event is when the key is pressed
@@ -11,6 +27,13 @@ export const setupEventListeners = (controls) => {
 
   // Add event listeners for the audio guide buttons
   document.getElementById('start_audio').addEventListener('click', startAudio); 
+
+  document.addEventListener('keydown', event => {
+    if (event.code === 'Space') {
+     playMusic()
+    }
+  })
+
   document.getElementById('stop_audio').addEventListener('click', stopAudio);
 };
 

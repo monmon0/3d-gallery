@@ -25,6 +25,7 @@ export const setupLighting = (scene, paintings) => {
 
   // create spotlights by calling the createSpotlight function and passing in the parameters
   const spotlight1 = createSpotlight(0,20,-10,2,new THREE.Vector3(0, 2, -20));
+  // const spotlight5 = createSpotlight(10,20,-10,2,new THREE.Vector3(0, 2, -20));
   const spotlight2 = createSpotlight(0, 20, 10, 2.5, new THREE.Vector3(0, 2, 20));
   const spotlight3 = createSpotlight(-10,20,0, 2,new THREE.Vector3(-20, 2, 0));
   const spotlight4 = createSpotlight(10, 20, 0, 2.5, new THREE.Vector3(20, 2, 0));
@@ -35,6 +36,7 @@ export const setupLighting = (scene, paintings) => {
     spotlight1.target,
     spotlight2.target,
     spotlight3.target,
-    spotlight4.target
+    spotlight4.target,
+    // spotlight5.target,
   );
 };
