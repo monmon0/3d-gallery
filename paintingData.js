@@ -43,8 +43,8 @@ export const paintingData = [
   // Back Wall
   ...Array.from({ length: 4 }, (_, i) => ({
     imgSrc: `./src/artworks/${i + 5}.jpg`,
-    width: 5,
-    height: 3,
+    width: 2000,
+    height: 1000,
     position: { x: (-15 + 10 * i), y: 2, z: 19.5 },
     rotationY: Math.PI,
     info: {
@@ -59,8 +59,8 @@ export const paintingData = [
   // Left Wall
   ...Array.from({ length: 4 }, (_, i) => ({
     imgSrc: `./src/artworks/${i + 9}.jpg`,
-    width: 5,
-    height: 3,
+    width: 2000,
+    height: 1000,
     position: { x: -19.8*3, y: 2, z: -15 + 10 * i },
     rotationY: Math.PI / 2,
     info: {
@@ -75,8 +75,8 @@ export const paintingData = [
   // Right Wall
   ...Array.from({ length: 4 }, (_, i) => ({
     imgSrc: `./src/artworks/${i + 13}.jpg`,
-    width: 5,
-    height: 3,
+    width: 2000,
+    height: 1000,
     position: { x: 19.5, y: 2, z: -15 + 10 * i },
     rotationY: -Math.PI / 2,
     info: {

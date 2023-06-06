@@ -7,7 +7,7 @@ import { setupFloor } from './floor.js';
 import { createCeiling } from './ceiling.js';
 import { createBoundingBoxes } from './boundingBox.js';
 import { setupRendering } from './rendering.js';
-// import { setupEventListeners } from './eventListeners.js';
+import { setupEventListeners } from './eventListeners.js';
 import { addObjectsToScene } from './sceneHelpers.js';
 import { setupPlayButton } from './menu.js';
 import { setupAudio } from './audioGuide.js';
@@ -35,6 +35,6 @@ addObjectsToScene(scene, furniture);
 
 setupPlayButton(controls);
 
-// setupEventListeners(controls);
+setupEventListeners(controls);
 
 setupRendering(scene, camera, renderer, paintings, controls, walls, furniture);
