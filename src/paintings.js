@@ -15,7 +15,7 @@ export function createPaintings(scene, textureLoader) {
     // console.log(getImageDimensions(data.imgSrc))
 
     const painting = new THREE.Mesh( // create a mesh for each painting
-      new THREE.PlaneBufferGeometry(data.width, data.height),
+      new THREE.PlaneBufferGeometry(data.width/300, data.height/300),
       new THREE.MeshLambertMaterial({ 
         map: textureLoader.load(data.imgSrc),
     
@@ -38,5 +38,7 @@ export function createPaintings(scene, textureLoader) {
 
     paintings.push(painting); // push the painting to the paintings array
   });
+
+  console.log(paintingData)
   return paintings; // return the paintings array
 }
