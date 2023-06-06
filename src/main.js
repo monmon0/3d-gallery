@@ -11,6 +11,7 @@ import { setupEventListeners } from './eventListeners.js';
 import { addObjectsToScene } from './sceneHelpers.js';
 import { setupPlayButton } from './menu.js';
 import { setupAudio } from './audioGuide.js';
+import { setupFurniture} from './furniture.js';
 
 let { camera, controls, renderer } = setupScene();
 
@@ -23,14 +24,17 @@ const floor = setupFloor(scene);
 const ceiling = createCeiling(scene, textureLoader);
 const paintings = createPaintings(scene, textureLoader);
 const lighting = setupLighting(scene, paintings);
+const furniture = setupFurniture(scene, textureLoader)
 
 createBoundingBoxes(walls);
 createBoundingBoxes(paintings);
+createBoundingBoxes(furniture);
 
 addObjectsToScene(scene, paintings);
+addObjectsToScene(scene, furniture);
 
 setupPlayButton(controls);
 
 setupEventListeners(controls);
 
-setupRendering(scene, camera, renderer, paintings, controls, walls);
+setupRendering(scene, camera, renderer, paintings, controls, walls, furniture);
