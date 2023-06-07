@@ -13,6 +13,5 @@ export const createCeiling = (scene, textureLoader) => {
 
   ceilingPlane.rotation.x = Math.PI / 2; // rotate the plane 90 degrees so that it is flat and horizontal (the default rotation is 0, 0, 0). Math.PI is 180 degrees
   ceilingPlane.position.y = 10; // move the plane up 10 units in the Y axis
-
   scene.add(ceilingPlane); // add the plane to the sceness
 };
