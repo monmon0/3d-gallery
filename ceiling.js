@@ -2,7 +2,7 @@ import * as THREE from 'three';
 
 // create a function that takes a scene and a textureLoader as arguments that will be passed in from main.js where the createCeiling is called
 export const createCeiling = (scene, textureLoader) => {
-  const ceilingTexture = textureLoader.load('/src/img/white-texture.jpg'); // load the texture
+  const ceilingTexture = textureLoader.load('https://i.imgur.com/KpzhtPI.jpg'); // load the texture
   const ceilingGeometry = new THREE.PlaneGeometry(120, 40); // create the geometry
   const ceilingMaterial = new THREE.MeshLambertMaterial({
     // MeshLambertMaterial is useful for simulating non-shiny objects such as wood or stone which are still affected by lighting but aren't shiny
