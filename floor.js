@@ -3,7 +3,7 @@ import * as THREE from 'three';
 // the scene is passed in main.js where setupFloor is called
 export const setupFloor = (scene) => {
   const textureLoader = new THREE.TextureLoader(); // create a textureLoader
-  const floorTexture = textureLoader.load('src/img/floor.png'); // change the texture
+  const floorTexture = textureLoader.load('https://i.imgur.com/w7KzV0x.jpg'); // change the texture
 
   // `wrapS` and `wrapT` are properties of a texture that define how the texture should be wrapped horizontally and vertically. `RepeatWrapping` is a property of the `THREE` object that tells the texture to repeat when it reaches the end of the geometry
   floorTexture.wrapS = THREE.RepeatWrapping;

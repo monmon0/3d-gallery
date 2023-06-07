@@ -5,7 +5,7 @@ export function createWalls(scene, textureLoader) {
   scene.add(wallGroup); // add the group to the scene, then any child added to the group will display to the scene too
 
   // Create wall material with realistic colors and texture
-  const wallTexture = textureLoader.load('/src/img/white-texture.jpg');
+  const wallTexture = textureLoader.load('https://i.imgur.com/raNhcbK.jpg');
   wallTexture.wrapS = THREE.RepeatWrapping;
   wallTexture.wrapT = THREE.RepeatWrapping;
   wallTexture.repeat.set(2, 2); // `repeat` property of a texture is a Vector2 that defines how many times the texture should be repeated in the x and y directions. sets the texture to be repeated once in both the x and y directions. This means that the texture will not be repeated and will only be displayed once on the material
