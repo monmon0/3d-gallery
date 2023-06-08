@@ -4,6 +4,7 @@ import { startAudio, stopAudio } from './audioGuide.js';
 
 let audioPlay = false;
 // add the controls parameter which is the pointer lock controls and is passed from main.js where setupEventListeners is called
+var isMobile = Math.min(window.screen.width, window.screen.height) < 768 || navigator.userAgent.indexOf("Mobi") > -1;
 
 async function playMusic() {
   if(!audioPlay){

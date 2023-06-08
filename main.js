@@ -15,6 +15,8 @@ import { setupFurniture} from './furniture.js';
 
 let { camera, controls, renderer } = setupScene();
 
+var isMobile = Math.min(window.screen.width, window.screen.height) < 768 || navigator.userAgent.indexOf("Mobi") > -1;
+
 setupAudio(camera); 
 
 const textureLoader = new THREE.TextureLoader();
@@ -26,7 +28,9 @@ const paintings = createPaintings(scene, textureLoader);
 const lighting = setupLighting(scene, paintings);
 const furniture = setupFurniture(scene, textureLoader)
 
-createBoundingBoxes(walls);
+if (!isMobile){
+
+    createBoundingBoxes(walls);
 createBoundingBoxes(paintings);
 createBoundingBoxes(furniture);
 
@@ -38,3 +42,5 @@ setupPlayButton(controls);
 setupEventListeners(controls);
 
 setupRendering(scene, camera, renderer, paintings, controls, walls, furniture);
+}
+
