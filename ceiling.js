@@ -2,13 +2,12 @@ import * as THREE from 'three';
 
 // create a function that takes a scene and a textureLoader as arguments that will be passed in from main.js where the createCeiling is called
 export const createCeiling = (scene, textureLoader) => {
-  const ceilingTexture = textureLoader.load('https://i.imgur.com/KpzhtPI.jpg'); // load the texture
+  const ceilingTexture = textureLoader.load('https://i.imgur.com/GPdGJWp.jpg'); // load the texture
   const ceilingGeometry = new THREE.PlaneGeometry(120, 40); // create the geometry
   const ceilingMaterial = new THREE.MeshLambertMaterial({
     // MeshLambertMaterial is useful for simulating non-shiny objects such as wood or stone which are still affected by lighting but aren't shiny
     map: ceilingTexture, // `map` is a property of the material which takes a texture and applies it to the surface of the geometry
   });
-  const material = new THREE.MeshBasicMaterial( {color: 0xF8F6F6, side: THREE.DoubleSide} );
   const ceilingPlane = new THREE.Mesh(ceilingGeometry, ceilingMaterial); // Mesh is an object that takes a geometry and a material and combines them to create the final rendered object
 
   ceilingPlane.rotation.x = Math.PI / 2; // rotate the plane 90 degrees so that it is flat and horizontal (the default rotation is 0, 0, 0). Math.PI is 180 degrees

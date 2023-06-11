@@ -8,15 +8,14 @@ var isMobile = Math.min(window.screen.width, window.screen.height) < 768 || navi
 
 async function playMusic() {
   if(!audioPlay){
-    console.log('startMusic')
      startAudio()
      await new Promise((resolve, reject) => setTimeout(resolve, 1000));
      console.log("change state")
-    audioPlay = true
+      audioPlay = true
   }
   else if (audioPlay){
     stopAudio()
-    await new Promise((resolve, reject) => setTimeout(resolve, 1000));
+    await new Promise((resolve, reject) => setTimeout(resolve, 500));
     audioPlay = false
   }
 }

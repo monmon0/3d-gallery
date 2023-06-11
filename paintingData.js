@@ -1,77 +1,189 @@
 export const paintingData = [
-  // Front Wall
-  ...Array.from({ length: 4 }, (_, i) => ({
-    // Array.from creates an array from an array-like object. The first parameter is the array-like object. The second parameter is a map function that is called for each element in the array-like object. The map function takes two parameters: the element and the index. The map function returns the value that will be added to the new array. In this case, we are returning an object with the painting data. `_` is a placeholder for the element. We don't need it because we are not using the element. `i` is the index. We use it to set the painting number.
+
+  //--------------- wall ben phai---------------
+  { // ban ng thai ve dep
     imgSrc: `https://i.imgur.com/kBnFXI9.jpg`, // `i + 1` is the painting number. We add 1 to the index because the index starts at 0 but we want the painting numbers to start at 1.
-    width: 2000, // width of the painting
-    height: 1125, // height of the painting
-    position: { x: -32 + 10 * i, y: 2, z: -19.5 }, // position of the painting
+    width: 2000*1.5, // width of the painting
+    height: 1125*1.5, // height of the painting
+    position: { x: -32 + 15 * 0, y: 2, z: -19.5 }, // position of the painting
     rotationY: 0, // rotation of the painting
     info: { // info about the painting
-      title: `Van Gogh ${i + 1}`, 
+      title: `The absence of time`, 
       artist: 'Vincent van Gogh',
-      description: `This is one of the masterpieces by Vincent van Gogh, showcasing his unique style and emotional honesty. Artwork ${
-        i + 1
+      description: `This is one of the masterpieces by Vincent van Gogh, showcasing his unique style and emotional honesty.
       } perfectly encapsulates his love for the beauty of everyday life.`,
-      year: `Year ${i + 1}`,
+      year: `Year`,
     },
-  })),
+  },
 
-  // {
-  //   imgSrc: `artworks/${i + 1}.jpg`, // `i + 1` is the painting number. We add 1 to the index because the index starts at 0 but we want the painting numbers to start at 1.
-  //   width: 7.5, // width of the painting
-  //   height: 4.5, // height of the painting
-  //   position: { x: -32 + 10 * i, y: 2, z: -19.5 }, // position of the painting
-  //   rotationY: 0, // rotation of the painting
-  //   info: { // info about the painting
-  //     title: `Van Gogh ${i + 1}`, 
-  //     artist: 'Vincent van Gogh',
-  //     description: `This is one of the masterpieces by Vincent van Gogh, showcasing his unique style and emotional honesty. Artwork ${
-  //       i + 1
-  //     } perfectly encapsulates his love for the beauty of everyday life.`,
-  //     year: `Year ${i + 1}`,
-  //   }
-  // },
+  { // lub
+    imgSrc: `https://i.imgur.com/bRDn2Vy.png`, // `i + 1` is the painting number. We add 1 to the index because the index starts at 0 but we want the painting numbers to start at 1.
+    width: 1500*1.5, // width of the painting
+    height: 1500*1.5, // height of the painting
+    position: { x: -50, y: 2, z: -19.5 }, // position of the painting
+    rotationY: 0, // rotation of the painting
+    info: { // info about the painting
+      title: `The absence of time`, 
+      artist: 'Vincent van Gogh',
+      description: `This is one of the masterpieces by Vincent van Gogh, showcasing his unique style and emotional honesty.
+      } perfectly encapsulates his love for the beauty of everyday life.`,
+      year: `Year`,
+    },
+  },
 
-  // {
+  { // banj ng nhat tren ttw
+    imgSrc: `https://i.imgur.com/9Te0ag8.png`, // `i + 1` is the painting number. We add 1 to the index because the index starts at 0 but we want the painting numbers to start at 1.
+    width: 2000*1.5, // width of the painting
+    height: 1171*1.5, // height of the painting
+    position: { x: -32 + 15 * 3, y: 2, z: -19.5 }, // position of the painting
+    rotationY: 0, // rotation of the painting
+    info: { // info about the painting
+      title: `The absence of time`, 
+      artist: 'Vincent van Gogh',
+      description: `This is one of the masterpieces by Vincent van Gogh, showcasing his unique style and emotional honesty.
+      } perfectly encapsulates his love for the beauty of everyday life.`,
+      year: `Year`,
+    },
+  },
 
-  // },
+  { // mhs artist
+    imgSrc: `https://i.imgur.com/em91jZ4.jpg`, // `i + 1` is the painting number. We add 1 to the index because the index starts at 0 but we want the painting numbers to start at 1.
+    width: 2000, // width of the painting
+    height: 2000, // height of the painting
+    position: { x: -32 + 10 * 2, y: 2, z: -19.5 }, // position of the painting
+    rotationY: 0, // rotation of the painting
+    info: { // info about the painting
+      title: `The absence of time`, 
+      artist: 'Vincent van Gogh',
+      description: `This is one of the masterpieces by Vincent van Gogh, showcasing his unique style and emotional honesty.
+      } perfectly encapsulates his love for the beauty of everyday life.`,
+      year: `Year`,
+    },
+  },
 
+  { // mhs artist
+    imgSrc: `https://i.imgur.com/em91jZ4.jpg`, // `i + 1` is the painting number. We add 1 to the index because the index starts at 0 but we want the painting numbers to start at 1.
+    width: 2000, // width of the painting
+    height: 2000, // height of the painting
+    position: { x: -32 + 10 * 2, y: 2, z: -19.5 }, // position of the painting
+    rotationY: 0, // rotation of the painting
+    info: { // info about the painting
+      title: `The absence of time`, 
+      artist: 'Vincent van Gogh',
+      description: `This is one of the masterpieces by Vincent van Gogh, showcasing his unique style and emotional honesty.
+      } perfectly encapsulates his love for the beauty of everyday life.`,
+      year: `Year`,
+    },
+  },
 
+  
 
-
-  // Back Wall
-  ...Array.from({ length: 4 }, (_, i) => ({
-    imgSrc: `./src/artworks/${i + 5}.jpg`,
+  //---------------wall ben trai---------------
+  { // nhi bui
+    imgSrc: `https://i.imgur.com/49zZgae.jpg`, // nhi bùi
     width: 2000,
-    height: 1000,
-    position: { x: (-15 + 10 * i), y: 2, z: 19.5 },
+    height: 3046,
+    position: { x: (-25), y: 3, z: 19.5 },
     rotationY: Math.PI,
     info: {
-      title: `Van Gogh ${i + 5}`,
+      title: `Van `,
       artist: 'Vincent van Gogh',
-      description: `Artwork ${
-        i + 5
-      } by Vincent van Gogh is an exceptional piece showcasing his remarkable ability to capture emotion and atmosphere.`,
-      year: `Year ${i + 5}`,
+      description: `Artwork  by Vincent van Gogh is an exceptional piece showcasing his remarkable ability to capture emotion and atmosphere.`,
+      year: `Year`,
     },
-  })),
-  // Left Wall
-  ...Array.from({ length: 4 }, (_, i) => ({
-    imgSrc: `./src/artworks/${i + 9}.jpg`,
+  },
+
+  { // fusato
+    imgSrc: `https://i.imgur.com/W4oAzA2.jpg`, // nhi bùi
     width: 2000,
-    height: 1000,
-    position: { x: -19.8*3, y: 2, z: -15 + 10 * i },
-    rotationY: Math.PI / 2,
+    height: 2000,
+    position: { x: (-5), y: 3, z: 19.5 },
+    rotationY: Math.PI,
     info: {
-      title: `Van Gogh ${i + 9}`,
+      title: `Van `,
       artist: 'Vincent van Gogh',
-      description: `With its striking use of color and brushwork, Artwork ${
-        i + 9
-      } is a testament to Van Gogh's artistic genius.`,
-      year: `Year ${i + 9}`,
+      description: `Artwork  by Vincent van Gogh is an exceptional piece showcasing his remarkable ability to capture emotion and atmosphere.`,
+      year: `Year`,
     },
-  })),
+  },
+
+  { //minh gia thinh
+    imgSrc: `https://i.imgur.com/vHSQ9fl.png`, // nhi bùi
+    width: 2000,
+    height: 2500,
+    position: { x: (10), y: 3, z: 19.5 },
+    rotationY: Math.PI,
+    info: {
+      title: `Van `,
+      artist: 'Vincent van Gogh',
+      description: `Artwork  by Vincent van Gogh is an exceptional piece showcasing his remarkable ability to capture emotion and atmosphere.`,
+      year: `Year`,
+    },
+  },
+
+  { // nhi bui
+    imgSrc: `  https://i.imgur.com/ryOhHji.png`, // nhi bùi
+    width: 2000,
+    height: 2747,
+    position: { x: (-50), y: 3, z: 19.5 },
+    rotationY: Math.PI,
+    info: {
+      title: `Van `,
+      artist: 'Vincent van Gogh',
+      description: `Artwork  by Vincent van Gogh is an exceptional piece showcasing his remarkable ability to capture emotion and atmosphere.`,
+      year: `Year`,
+    },
+  },
+
+
+  // ----------------- wall mat truowc =-----------------------------
+    { // hynohenky
+      imgSrc: `https://i.imgur.com/TvMX0d5.jpg`,
+      width: 2000*1.5,
+      height: 1597*1.5,
+      position: { x: -19.8*3, y: 2, z: -10},
+      rotationY: Math.PI / 2,
+      info: {
+        title: `Van Gogh`,
+        artist: 'Vincent van Gogh',
+        description: `With its striking use of color and brushwork, Artworkis a testament to Van Gogh's artistic genius.`,
+        year: `Year`,
+      },
+    },
+ 
+
+
+    { // xe
+      imgSrc: `https://i.imgur.com/ZynZM54.jpg`,
+      width: 2835*1.5,
+      height: 1772*1.5,
+      position: { x: -19.8*3, y: 2, z: 7},
+      rotationY: Math.PI / 2,
+      info: {
+        title: `Van Gogh`,
+        artist: 'Vincent van Gogh',
+        description: `With its striking use of color and brushwork, Artworkis a testament to Van Gogh's artistic genius.`,
+        year: `Year`,
+      },
+    },
+  // ...Array.from({ length: 4 }, (_, i) => ({
+  //   imgSrc: `./src/artworks/${i + 9}.jpg`,
+  //   width: 2000,
+  //   height: 1000,
+  //   position: { x: -19.8*3, y: 2, z: -15 + 10 * i },
+  //   rotationY: Math.PI / 2,
+  //   info: {
+  //     title: `Van Gogh ${i + 9}`,
+  //     artist: 'Vincent van Gogh',
+  //     description: `With its striking use of color and brushwork, Artwork ${
+  //       i + 9
+  //     } is a testament to Van Gogh's artistic genius.`,
+  //     year: `Year ${i + 9}`,
+  //   },
+  // })),
+
+
+
   // Right Wall
   ...Array.from({ length: 4 }, (_, i) => ({
     imgSrc: `./src/artworks/${i + 13}.jpg`,

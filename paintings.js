@@ -1,21 +1,20 @@
 import * as THREE from 'three';
 
 import { paintingData } from './paintingData.js';
-import { getImageDimensions } from './paintingDi.js';
- 
+import { getDatabase, ref, onValue } from "firebase/database";
+import {db} from "/firebase.js"
+
+
 export function createPaintings(scene, textureLoader) {
 
-
+  // const querySnapshot = await getDocs(collection(db, "artworks"));
   // create a function that takes a scene and a textureLoader as arguments that will be passed in from main.js where the createPaintings is called
   let paintings = [];
 
   paintingData.forEach((data, i) => {
 
-    // console.log("start getting")
-    // console.log(getImageDimensions(data.imgSrc))
-
     const painting = new THREE.Mesh( // create a mesh for each painting
-      new THREE.PlaneBufferGeometry(data.width/300, data.height/300),
+      new THREE.PlaneGeometry(data.width/300, data.height/300),
       new THREE.MeshLambertMaterial({ 
         map: textureLoader.load(data.imgSrc),
     
@@ -26,6 +25,7 @@ export function createPaintings(scene, textureLoader) {
    
     painting.position.set(data.position.x, data.position.y, data.position.z); // position the painting
     painting.rotation.y = data.rotationY; // rotate the painting
+    painting.material.transparent = true;
     // painting.scale.set(5,5,5)
     // add a userData property to the painting that will hold the painting info
     painting.userData = {
@@ -39,6 +39,5 @@ export function createPaintings(scene, textureLoader) {
     paintings.push(painting); // push the painting to the paintings array
   });
 
-  console.log(paintingData)
   return paintings; // return the paintings array
 }

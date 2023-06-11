@@ -13,6 +13,7 @@ import { setupPlayButton } from './menu.js';
 import { setupAudio } from './audioGuide.js';
 import { setupFurniture} from './furniture.js';
 
+
 let { camera, controls, renderer } = setupScene();
 
 var isMobile = Math.min(window.screen.width, window.screen.height) < 768 || navigator.userAgent.indexOf("Mobi") > -1;

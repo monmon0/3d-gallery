@@ -4,7 +4,7 @@ import * as THREE from 'three';
 // add paintings as a parameter that will be passed in from main.js where setupLighting is called
 export const setupLighting = (scene, paintings) => {
   // Ambient light
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.95);
   scene.add(ambientLight); // add the ambient light to the scene
 
 
@@ -27,16 +27,16 @@ export const setupLighting = (scene, paintings) => {
 
 
   // create spotlights by calling the createSpotlight function and passing in the parameters
-  const spotlight1 = createSpotlight(0,20,-10,2,new THREE.Vector3(0, 2, -20)); // on the left
-  const spotlight1n = createSpotlight(-20,20,-10,2,new THREE.Vector3(-40, 2, -20)); // on the left
-  const spotlight1nn = createSpotlight(-40,20,-10,2,new THREE.Vector3(-80, 2, -20)); // on the left
+  const spotlight1 = createSpotlight(0,20,-10,1,new THREE.Vector3(0, 2, -20)); // on the left
+  const spotlight1n = createSpotlight(-20,20,-10,1,new THREE.Vector3(-40, 2, -20)); // on the left
+  const spotlight1nn = createSpotlight(-40,20,-10,1,new THREE.Vector3(-80, 2, -20)); // on the left
 
-  const spotlight2 = createSpotlight(0, 20, 10, 2.5, new THREE.Vector3(0, 2, 20)); // on the right og
-  const spotlight2n = createSpotlight(-20, 20, 10, 2.5, new THREE.Vector3(-40, 2, 20)); // on the right 2
-  const spotlight2nn = createSpotlight(-40, 20, 10, 2.5, new THREE.Vector3(-80, 2, 20)); // on the right 2
+  const spotlight2 = createSpotlight(0, 20, 10, 1, new THREE.Vector3(0, 2, 20)); // on the right og
+  const spotlight2n = createSpotlight(-20, 20, 10, 1, new THREE.Vector3(-40, 1, 20)); // on the right 2
+  const spotlight2nn = createSpotlight(-40, 20, 10, 1, new THREE.Vector3(-80, 2, 20)); // on the right 2
 
-  const spotlight3 = createSpotlight(-10,20,0, 2,new THREE.Vector3(-20, 2, 0)); // the missing spotlight
-  const spotlight4 = createSpotlight(10, 20, 0, 2.5, new THREE.Vector3(20, 2, 0)); // spot light that is on the smaller wall
+  const spotlight3 = createSpotlight(-10,20,0, 1,new THREE.Vector3(-20, 2, 0)); // the missing spotlight
+  const spotlight4 = createSpotlight(10, 20, 0, 1, new THREE.Vector3(20, 2, 0)); // spot light that is on the smaller wall
 
   const width = 10;
   const height = 10;

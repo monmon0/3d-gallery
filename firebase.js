@@ -1,21 +1,15 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getDatabase } from "firebase/database";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// TODO: Replace the following with your app's Firebase project configuration
+// See: https://firebase.google.com/docs/web/learn-more#config-object
 const firebaseConfig = {
-  apiKey: "AIzaSyDeftV1g4x2YQZ5BkQoh9uoWnKSXfQAD_U",
-  authDomain: "d-gallery-9932e.firebaseapp.com",
-  projectId: "d-gallery-9932e",
-  storageBucket: "d-gallery-9932e.appspot.com",
-  messagingSenderId: "601227291570",
-  appId: "1:601227291570:web:c94208005a890c1eb7d2ab",
-  measurementId: "G-JCLKCTJHTQ"
+  // ...
+  // The value of `databaseURL` depends on the location of the database
+  databaseURL: "https://d-gallery-9932e-default-rtdb.firebaseio.com/",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+// Initialize Realtime Database and get a reference to the service
+export const db = getDatabase(app);
